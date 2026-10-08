@@ -50,6 +50,7 @@ Stow links a whole directory when the target doesn't exist yet (e.g. `~/.config/
 | `qt6ct` | `~/.config/qt6ct/` | Qt theme settings. |
 | `mimeapps` | `~/.config/mimeapps.list` | Default applications. |
 | `vscodium` | `~/.config/VSCodium/User/settings.json` | Editor settings only (no extensions or state). |
+| `dunst` | `~/.config/dunst/dunstrc` | Notifications. Catppuccin Mocha, top-right, matches Hyprland gaps/border/rounding. Started on demand by D-Bus, not autostart. |
 
 ### Inactive (inherited from upstream, not stowed)
 
@@ -92,6 +93,7 @@ These are typecraft's configs, mostly for an X11/i3 setup. Leave them alone unle
 | hyprpaper | `pkill hyprpaper; hyprpaper & disown` |
 | kitty | `ctrl+shift+F5` inside kitty |
 | fish | `exec fish` |
+| dunst | `pkill dunst` (D-Bus restarts it on the next notification); test with `notify-send hi` |
 
 **Track a new config** (e.g. `~/.config/btop/btop.conf`):
 ```sh

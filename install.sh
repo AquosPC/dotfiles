@@ -7,7 +7,7 @@ cd "$(dirname "$(realpath "$0")")"
 PACKAGES=(
   hyprland hyprpaper hyprlock hyprmocha backgrounds
   kitty waybar wofi starship fish
-  gtk qt6ct nwg-look mimeapps vscodium
+  gtk qt6ct nwg-look mimeapps vscodium dunst
 )
 
 if [[ -n "$(git status --porcelain)" ]]; then
