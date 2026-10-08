@@ -124,6 +124,5 @@ pacman -Qqem > ~/dotfiles/pkglist-aur.txt   # AUR / foreign
 
 ## Known issues
 
-- `hyprland/.config/hypr/hypridle.conf`: `lock_cmd = pidof hyperlock || hyprlock` has a typo (`hyperlock`). The `pidof` check never matches, so idle can start a second hyprlock while one is already running. Should be `pidof hyprlock || hyprlock`.
 - `pkglist.txt` includes CachyOS-specific packages (kernel, `cachyos-*`). On plain Arch, `install.sh` skips and lists them.
 - `pkglist-aur.txt` contains `claudebar`, which waybar's `custom/claudebar` module needs. Without it that module stays empty.
