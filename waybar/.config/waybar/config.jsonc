@@ -2,7 +2,15 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["custom/claudebar", "network", "pulseaudio", "battery", "clock"],
+  "custom/claudebar": {
+    "exec": "claudebar --no-color=bar --format \"<span size='13000'>{icon} </span> {session_pct}%\" --tooltip-font 'MesloLGS Nerd Font Mono' --color-low '#a6e3a1' --color-mid '#f9e2af' --color-high '#fab387' --color-critical '#f38ba8'",
+    "return-type": "json",
+    "interval": 300,
+    "signal": 13,
+    "tooltip": true,
+    "on-click": "xdg-open https://claude.ai/settings/usage"
+  },
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
